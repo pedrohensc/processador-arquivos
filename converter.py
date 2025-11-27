@@ -21,3 +21,5 @@ def verificar_arquivo(caminho):
         print("❌ Arquivo não encontrado!")
         return False
     return True
+def formatos_suportados():
+    return ["png", "jpg", "jpeg", "webp"]
