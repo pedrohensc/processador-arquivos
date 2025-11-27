@@ -14,3 +14,10 @@ if __name__ == "__main__":
         print("Uso: python converter.py <imagem_origem> <imagem_destino>")
     else:
         converter_imagem(sys.argv[1], sys.argv[2])
+import os
+
+def verificar_arquivo(caminho):
+    if not os.path.exists(caminho):
+        print("❌ Arquivo não encontrado!")
+        return False
+    return True
