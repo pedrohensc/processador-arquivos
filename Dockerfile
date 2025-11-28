@@ -9,7 +9,6 @@ WORKDIR /app
 COPY pyproject.toml poetry.lock ./
 
 # Instala o poetry, as dependências, e limpa o cache.
-# COMANDO CORRIGIDO: Tudo em uma única linha para evitar erros de sintaxe Bash.
 RUN pip install poetry && poetry install --no-root --no-dev && poetry cache clear --all pypi -n
 
 # 4. CÓDIGO DA APLICAÇÃO
