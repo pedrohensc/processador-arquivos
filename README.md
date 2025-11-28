@@ -56,3 +56,4 @@ docker run --rm \
     -v $(pwd):/app/data \
     ghcr.io/pedrohensc/processador-arquivos:v1.0.0 \
     convert /app/data/entrada.jpg --to png
+    
