@@ -15,8 +15,8 @@ WORKDIR /app
 # Copia os arquivos de configuração do Poetry.
 COPY pyproject.toml poetry.lock ./
 
-# Instala o poetry, as dependências, e limpa o cache. (Tudo em uma linha para estabilidade)
-RUN pip install poetry && poetry install --no-root --no-dev && poetry cache clear --all pypi -n
+# Instala o poetry, as dependências, e limpa o cache.
+RUN pip install poetry && poetry install --no-root && poetry cache clear --all pypi -n
 
 # 4. CÓDIGO DA APLICAÇÃO
 # Copia o restante do código da aplicação.
