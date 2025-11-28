@@ -4,9 +4,12 @@ FROM python:3.11-slim
 # 2. DIRETÓRIO DE TRABALHO
 WORKDIR /app
 
-# 3. INSTALAÇÃO DE DEPENDÊNCIAS DO POETRY
+# 3. INSTALAÇÃO DE DEPENDÊNCIAS DO POETRY:
 COPY pyproject.toml poetry.lock ./
-RUN pip install poetry && poetry install --no-root --no-dev
+# Instala o poetry, as dependências, e limpa o cache.
+RUN pip install poetry && \
+    poetry install --no-root --no-dev && \
+    poetry cache clear --all pypi -n
 
 # 4. CÓDIGO DA APLICAÇÃO
 COPY . .
