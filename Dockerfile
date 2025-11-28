@@ -1,5 +1,5 @@
 # Dockerfile para empacotamento da aplicação Processador de Arquivos (Poetry/Python)
-FROM python:3.11-slim
+FROM python:3.12-slim
 
 # 1. INSTALAÇÃO DE FERRAMENTAS DO SISTEMA (para compilação de dependências nativas)
 # Isso corrige o "exit code 1" que ocorre ao compilar dependências como Pillow.
